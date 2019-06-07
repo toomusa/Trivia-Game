@@ -12,11 +12,53 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 
   <title>Document</title>
 </head>
 <body>
 
+<div class="jumbotron">
+  <div class="container">
+  
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 col-md-12" id="heading">
+        <!-- header row -->
+        <button id="clock" onclick="startClock()">Start Timer</button>
+        <h1>Trivia Game</h1>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-3 col-xs-1 col-md-4" id="spacer">
+        <!-- left-side spacer -->
+      </div>
+
+      <div class="col-sm-6 col-xs-10 col-md-4" id="main">
+        <!-- main content area -->
+        <div><button id="start-game"> </button></div>
+        <div class="receptacle" id="questiondiv"> </div>
+        <div class="receptacle" id="cAnswerdiv"> </div>
+        <div class="receptacle" id="iAnswer1div"> </div>
+        <div class="receptacle" id="iAnswer2div"> </div>
+        <div class="receptacle" id="iAnswer3div"> </div>
+
+      </div>
+
+      <div class="col-sm-3 col-xs-1 col-md-4" id="spacer">
+        <!-- right-side spacer -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 col-md-12" id="footing">
+        <!-- footer row -->
+      </div>
+    </div>
+
+  </div>
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script rel="javascript" src="./assets/javascript/code.js"></script>
