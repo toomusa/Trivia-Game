@@ -19,34 +19,102 @@
 </head>
 <body>
 
-<div class="jumbotron">
+<!-- <div class="jumbotron"> -->
   <div class="container">
   
     <div class="row">
       <div class="col-sm-12 col-xs-12 col-md-12" id="heading">
         <!-- header row -->
-        <button id="clock" onclick="startClock()">Start Timer</button>
         <h1>Trivia Game</h1>
       </div>
     </div>
   
     <div class="row">
-      <div class="col-sm-3 col-xs-1 col-md-4" id="spacer">
+      <div class="col-sm-2 col-xs-1 col-md-2" id="spacer">
         <!-- left-side spacer -->
       </div>
 
-      <div class="col-sm-6 col-xs-10 col-md-4" id="main">
+      <div class="col-sm-8 col-xs-10 col-md-8" id="main">
         <!-- main content area -->
-        <div><button id="start-game"> </button></div>
-        <div class="receptacle" id="questiondiv"> </div>
-        <div class="receptacle" id="cAnswerdiv"> </div>
-        <div class="receptacle" id="iAnswer1div"> </div>
-        <div class="receptacle" id="iAnswer2div"> </div>
-        <div class="receptacle" id="iAnswer3div"> </div>
-
+        <div class="row">
+          <!-- right score, timer, wrong score -->
+          <div class="col-sm-4 col-xs-4 col-md-4" id="right-score">
+            <button class="btn btn-success btn-block">Right: <span id="right-picks"> 0</span></button>
+          </div>
+        <div class="col-sm-4 col-xs-4 col-md-4" id="game-timer">
+            <button class="btn btn-primary btn-block">Timer: <span id="clock"> </span></button>
+        </div>
+        <div class="col-sm-4 col-xs-4 col-md-4" id="wrong-score">
+            <button class="btn btn-danger btn-block">Wrong: <span id="wrong-picks"> 0</span></button>
+        </div>
+        </div>
+        <div class="row">
+          <!-- game category and difficulty settings -->
+          <div class="col-sm-12 col-xs-12 col-md-12" id="game-settings">
+            <h5>Category</h5>
+              <div class="btn-group btn-group-toggle btn-block" id="categories" data-toggle="buttons">
+                <label class="btn btn-secondary" id="category1">
+                  <input type="radio" name="options" autocomplete="off"> Animals
+                </label>
+                <label class="btn btn-secondary" id="category2">
+                  <input type="radio" name="options" autocomplete="off"> Celebrities
+                </label>
+                <label class="btn btn-secondary" id="category3">
+                  <input type="radio" name="options" autocomplete="off"> Sports
+                </label>
+              </div>
+            <h5>Difficulty</h5>
+              <div class="btn-group btn-group-toggle btn-block" id="levels" data-toggle="buttons">
+                <label class="btn btn-secondary" id="diff-easy">
+                  <input type="radio" name="options" autocomplete="off"> Easy
+                </label>
+                <label class="btn btn-secondary" id="diff-medium">
+                  <input type="radio" name="options" autocomplete="off"> Medium
+                </label>
+                <label class="btn btn-secondary" id="diff-hard">
+                  <input type="radio" name="options" autocomplete="off"> Hard
+                </label>
+              </div>
+            <div style="text-align: center"><button class="btn btn-block" id="start-game">Start Game</button></div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- text box for game messages -->
+          <div class="col-sm-12 col-xs-12 col-md-12" id="game-marquee">
+            <div style="text-align: center"><button class="btn btn-block" id="text-box"> </button></div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- displays average response time and number of correct picks -->
+          <div class="col-sm-12 col-xs-12 col-md-12" id="game-results">
+            <h5 style="text-align: center">Game Results</h5>
+              <button class="btn btn-outline-primary btn-block"><span id="response-time"> </span></button>
+              <button class="btn btn-outline-primary btn-block"><span id="response-score"> </span></button>
+          </div>
+        </div>
+        <div class="row">
+          <!-- print field for question and answers -->
+          <div class="col-sm-12 col-xs-12 col-md-12" id="game-trivia">
+            <div class="btn btn-block">
+              <button class="btn btn-info btn-block"><span class="receptacle" id="questionDiv"> </span></button>
+              <button class="btn btn-outline-dark btn-block option"><span class="receptacle" id="answerDiv1"> </span></button>
+              <button class="btn btn-outline-dark btn-block option"><span class="receptacle" id="answerDiv2"> </span></button>
+              <button class="btn btn-outline-dark btn-block option"><span class="receptacle" id="answerDiv3"> </span></button>
+              <button class="btn btn-outline-dark btn-block option"><span class="receptacle" id="answerDiv4"> </span></button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- print field for giphy -->
+          <div class="col-sm-12 col-xs-12 col-md-12" id="game-giphy">
+              <button class="btn btn-block">
+                <span id="giphy-home"> </span>
+              </button>
+          </div>
+        </div>
       </div>
 
-      <div class="col-sm-3 col-xs-1 col-md-4" id="spacer">
+      <div class="col-sm-2 col-xs-1 col-md-2" id="spacer">
         <!-- right-side spacer -->
       </div>
     </div>
@@ -58,7 +126,7 @@
     </div>
 
   </div>
-</div>
+<!-- </div> -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script rel="javascript" src="./assets/javascript/code.js"></script>
